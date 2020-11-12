@@ -32,12 +32,12 @@ public class Printer {
     }
 
     public static void printExp() {
-        printFactorial(7);
+        printExp(2,8);
     }
     public static void printFactorial(int j) {
-        int factorial = 0;
-        for (int i = 0; i < j; i++) {
-            factorial += factorial*(j-i);
+        int factorial = j;
+        for (int i = 1; i < j; i++) {
+            factorial = factorial*(j-i);
         }
         System.out.println(factorial);
     }

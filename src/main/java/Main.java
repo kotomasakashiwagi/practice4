@@ -9,7 +9,7 @@ public class Main {
         } else if (args[0].equals("4-3")) {
             Printer.printExp();
         } else if (args[0].equals("4-4")) {
-            Printer.printExp();
+            Printer.printFactorial();
         } else if (args[0].equals("4-5")) {
             Printer.printExp();
         }
