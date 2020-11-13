@@ -45,5 +45,8 @@ public class Printer {
     public static void printFactorial() {
         printFactorial( 7);
     }
+    public static void printInt(int x){
+        System.out.println(x);
+    }
 
 }
