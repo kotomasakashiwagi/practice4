@@ -3,19 +3,21 @@ import java.util.List;
 import java.util.Scanner;
 
 public class IntScanner {
-    public static List scanTenNumbers(String s) {
-        Printer.printString(s);
+    private static final int TEN = 10;
+
+    public static List scanTenNumbers() {
+        Printer.printString("整数を１０個入力してください。");
         Scanner scan = new Scanner(System.in);
         List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < TEN; i++) {
             int n = scan.nextInt();
             list.add(n);
         }
         return list;
     }
 
-    public static List scanTenNumbers0Or1(String s) {
-        Printer.printString(s);
+    public static List scanTenNumbers0Or1() {
+        Printer.printString("0か1の整数を１０個入力してください。");
         Scanner scan = new Scanner(System.in);
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
@@ -28,12 +30,13 @@ public class IntScanner {
         }
         return list;
     }
-//一回の野球の得点をスキャン
+    //一回の野球の得点をスキャン
     public static int scanIntX() {
         Scanner scan = new Scanner(System.in);
         return scan.nextInt();
     }
-//正数字をスキャン
+
+    //正数字をスキャン
     public static int scanPositiveX() {
 
         int x = scanIntX();
@@ -42,5 +45,20 @@ public class IntScanner {
         }
         return x;
 
+    }
+
+    //
+    public static List scanTenPositiveX() {
+        System.out.println("正数字を１０個入力してください。");
+        Scanner scan = new Scanner(System.in);
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < TEN; i++) {
+            int x = scan.nextInt();
+            if (x < 0) {
+                throw new IllegalArgumentException("正数字を入れてください");
+            }
+            list.add(x);
+        }
+        return list;
     }
 }

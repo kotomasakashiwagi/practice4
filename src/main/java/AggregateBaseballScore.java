@@ -1,4 +1,5 @@
 import java.util.List;
+
 //スコアをそれぞれ合計したIntpairを返す
 public class AggregateBaseballScore {
     public static IntPair aggregateBaseballScore(List list) {
@@ -17,7 +18,8 @@ public class AggregateBaseballScore {
         PrinterRelatedBaseball.printAggregateScore(intPair);
         return intPair;
     }
-//勝ち負け引き分けを決める
+
+    //勝ち負け引き分けを決める
     public static EnumOfWinOrLose.Winner judgeBaseballGame(IntPair intPair) {
         if (intPair.getX() > intPair.getY()) {
             return EnumOfWinOrLose.Winner.Team1;
