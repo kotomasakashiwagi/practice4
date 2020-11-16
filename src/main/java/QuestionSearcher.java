@@ -18,15 +18,15 @@ public class QuestionSearcher {
             put("4-11", new Question11());
             put("4-12", new Question12());
             put("4-13", new Question13());
-            put("4-14", new Question4());
-            put("4-15", new Question5());
-            put("4-16", new Question6());
-            put("4-17", new Question7());
-            put("4-18", new Question8());
-            put("4-19", new Question9());
-            put("4-20", new Question10());
-            put("4-21", new Question11());
-            put("4-22", new Question12());
+            put("4-14", new Question14());
+            put("4-15", new Question15());
+            put("4-16", new Question16());
+            put("4-17", new Question17());
+            put("4-18", new Question18());
+            put("4-19", new Question19());
+            put("4-20", new Question20());
+            put("4-21", new Question21());
+            put("4-22", new Question22());
             put("err", new OutOfQuestion());
         }
 

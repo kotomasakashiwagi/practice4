@@ -1,3 +1,6 @@
+import java.util.InputMismatchException;
+import java.util.List;
+
 public interface Question {
     void run();
 }
@@ -34,7 +37,13 @@ class Question4 implements Question {
 class Question5 implements Question {
     @Override
     public void run() {
-        CalculateAverage.calculateAverage();
+        try {
+            List list = IntScanner.scanTenNumbers("整数を１０個入力してください。");
+            int ave = UtilityOfList.calculateSumOfList(list) / list.size();
+            Printer.printInt(ave);
+        } catch (InputMismatchException e) {
+            System.err.println("数字を入力してください。");
+        }
     }
 }
 
@@ -42,13 +51,29 @@ class Question6 implements Question {
     @Override
     public void run() {
 
+        try {
+            List list = IntScanner.scanTenNumbers0Or1("0か1の整数を１０個入力してください。");
+            int WIN = 1;
+            IntPair intPair = ValueCounterInList.countValueInList(WIN, list);
+            Printer.printWinLose(intPair);
+        } catch (InputMismatchException e) {
+            System.err.println("数字を入力してください。");
+        }
+
     }
 }
 
 class Question7 implements Question {
     @Override
     public void run() {
-
+        try {
+            List list = BaseballScoreBoard.BaseballScore();
+            IntPair intPair = AggregateBaseballScore.aggregateBaseballScore(list);
+            EnumOfWinOrLose.Winner winner = AggregateBaseballScore.judgeBaseballGame(intPair);
+            PrinterRelatedBaseball.printWinTeam(winner);
+        }catch (InputMismatchException e){
+            System.err.println("数字を入力してください。");
+        }
     }
 }
 
