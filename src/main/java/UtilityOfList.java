@@ -10,6 +10,7 @@ public class UtilityOfList {
         }
         return sum;
     }
+
     public static double calculateSumOfDoubleList(List list) {
         double sum = 0;
         for (Object o : list) {
@@ -40,13 +41,21 @@ public class UtilityOfList {
     }
 
 
-    private static int sum = 0;
     public static int calculateSumOfListUnderHundred() {
+        int sum = 0;
         while (sum <= 100) {
-        int i = IntScanner.scanIntX();
-        sum += i;
+            int i = IntScanner.scanIntX();
+            sum += i;
         }
         return sum;
+    }
+
+    public static List createList(int n) {
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < n; i++) {
+            list.add(" ");
+        }
+        return list;
     }
 
 }

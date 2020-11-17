@@ -8,7 +8,7 @@ public class Question16 implements Question {
         try {
             int i = IntScanner.scanXMoreThanTwo();
             List list = PrimeFactorization.primeFactorization(i);
-            Printer.printList(list);
+            Printer.printListRow(list);
         } catch (InputMismatchException e) {
             System.err.println("数字を入力してください。");
         } catch (IllegalArgumentException e) {
