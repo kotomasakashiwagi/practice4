@@ -22,7 +22,7 @@ public class QuestionSearcher {
             put("4-15", new Question15());
             put("4-16", new Question16());
             put("4-17", new Question17());
-            //put("4-18", new Question18());
+            put("4-18", new Question18());
             //put("4-19", new Question19());
             //put("4-20", new Question20());
             //put("4-21", new Question21());

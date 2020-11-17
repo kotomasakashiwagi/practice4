@@ -101,6 +101,9 @@ public class Printer {
 
         }
     }
+    public static void printDouble(double d){
+        System.out.println(d);
+    }
 
 
 }

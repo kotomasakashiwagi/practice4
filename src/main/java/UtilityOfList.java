@@ -10,6 +10,14 @@ public class UtilityOfList {
         }
         return sum;
     }
+    public static double calculateSumOfDoubleList(List list) {
+        double sum = 0;
+        for (Object o : list) {
+            double a = (double) o;
+            sum += a;
+        }
+        return sum;
+    }
 
     public static int calculateMaxInList(List list) {
         int max = (int) list.get(0);
@@ -31,6 +39,7 @@ public class UtilityOfList {
         return min;
     }
 
+
     private static int sum = 0;
     public static int calculateSumOfListUnderHundred() {
         while (sum <= 100) {
@@ -39,4 +48,5 @@ public class UtilityOfList {
         }
         return sum;
     }
+
 }
