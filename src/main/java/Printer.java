@@ -75,12 +75,30 @@ public class Printer {
         }
     }
 
-    public static void printListRepeatedly(int n){
+    public static void printListRepeatedly(int n) {
         List list = ListGenerator.generateListOfNaturalNumber();
         list.add(0);
-        for (int i=0;i<n;i++){
-            int a = i%10;
+        for (int i = 0; i < n; i++) {
+            int a = i % 10;
             System.out.print(list.get(a));
+        }
+    }
+
+    private static final String PRIME = "素数";
+    private static final String NOTPRIME = "素数でない";
+
+    public static void printIsPrimeNumber(boolean b) {
+        if (b) {
+            System.out.println(PRIME);
+        } else {
+            System.out.println(NOTPRIME);
+        }
+    }
+
+    public static void printList(List list) {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+
         }
     }
 

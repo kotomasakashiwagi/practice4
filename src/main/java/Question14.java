@@ -1,12 +1,12 @@
 import java.util.InputMismatchException;
 
-public class Question14 implements Question{
+public class Question14 implements Question {
     @Override
-    public void run(){
+    public void run() {
         try {
             String s = BaseballCount.countStrikeBallFoul();
             Printer.printString(s);
-        }catch (InputMismatchException e){
+        } catch (InputMismatchException e) {
             System.out.println("数字を入力してください。");
         }
     }

@@ -27,10 +27,12 @@ public class PrinterRelatedBaseball {
             System.out.println("引き分け");
         }
     }
-    public static void printStrikeOrBall(){
+
+    public static void printStrikeOrBall() {
         System.out.println("ストライク=1 or ボール=2 ?");
     }
-    public static void printStrikeOrBallOrFoul(){
+
+    public static void printStrikeOrBallOrFoul() {
         System.out.println("ストライク=1 or ボール=2 orファール=3 ?");
     }
 }

@@ -6,7 +6,7 @@ public class Question13 implements Question {
         try {
             String s = BaseballCount.countStrikeOrBall();
             Printer.printString(s);
-        }catch (InputMismatchException e){
+        } catch (InputMismatchException e) {
             System.out.println("数字を入力してください。");
         }
     }
