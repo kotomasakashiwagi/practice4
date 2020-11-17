@@ -6,6 +6,8 @@ public class Printer {
 
     private static final String SPAM = "SPAM";
     private static DecimalFormat format1 = new DecimalFormat("0.#");
+    private static final String PRIME = "素数";
+    private static final String NOTPRIME = "素数でない";
 
     //10回同じ単語を出力
     public static void printWords(String s, int j) {
@@ -21,7 +23,7 @@ public class Printer {
     //九九を一段出力
     public static void printKuKu(int j) {
         for (int i = 1; i <= 9; i++) {
-            System.out.println(j * i);
+            System.out.printf("%3d",j * i);
         }
     }
 
@@ -84,8 +86,6 @@ public class Printer {
         }
     }
 
-    private static final String PRIME = "素数";
-    private static final String NOTPRIME = "素数でない";
 
     public static void printIsPrimeNumber(boolean b) {
         if (b) {
