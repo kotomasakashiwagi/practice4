@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class UtilityOfList {
@@ -28,5 +29,14 @@ public class UtilityOfList {
             }
         }
         return min;
+    }
+
+    private static int sum = 0;
+    public static int calculateSumOfListUnderHundred() {
+        while (sum <= 100) {
+        int i = IntScanner.scanIntX();
+        sum += i;
+        }
+        return sum;
     }
 }

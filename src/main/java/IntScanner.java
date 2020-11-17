@@ -39,7 +39,6 @@ public class IntScanner {
 
     //正数字をスキャン
     public static int scanPositiveX() {
-        System.out.println("正の数字を入れてください");
         int x = scanIntX();
         if (x < 0) {
             throw new IllegalArgumentException("正数字を入れてください");
