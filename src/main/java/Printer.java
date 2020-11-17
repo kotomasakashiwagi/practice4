@@ -23,7 +23,7 @@ public class Printer {
     //九九を一段出力
     public static void printKuKu(int j) {
         for (int i = 1; i <= 9; i++) {
-            System.out.printf("%3d",j * i);
+            System.out.printf("%3d", j * i);
         }
     }
 
@@ -101,9 +101,16 @@ public class Printer {
 
         }
     }
-    public static void printDouble(double d){
+
+    public static void printDouble(double d) {
         System.out.println(d);
     }
 
+    public static void printStringANumberOfTimes(String s, int j) {
+        for (int i = 0; i < j; i++) {
+            System.out.print(s + " ");
+        }
+        System.out.print("\n");
 
+    }
 }
