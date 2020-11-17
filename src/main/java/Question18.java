@@ -9,6 +9,7 @@ public class Question18 implements Question{
         try {
             List list = DoubleScanner.scanUntilZero();
             double d = UtilityOfList.calculateSumOfDoubleList(list);
+            System.out.println("合計は");
             Printer.printDouble(d);
         }catch (InputMismatchException e) {
             System.err.println("数字を入力してください。");
