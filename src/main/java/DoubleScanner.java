@@ -10,13 +10,13 @@ public class DoubleScanner {
         return scan.nextDouble();
     }
 
-    public static List scanUntilZero() {
+    public static List<Double> scanUntilZero() {
         List<Double> list = new ArrayList<>();
         scanUntilX(ZERO, list);
         return list;
     }
 
-    public static void scanUntilX(double d, List list) {
+    public static void scanUntilX(double d, List<Double> list) {
         double v = scanDoubleX();
         list.add(v);
         if (v == 0) {

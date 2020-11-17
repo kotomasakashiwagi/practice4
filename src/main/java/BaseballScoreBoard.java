@@ -6,7 +6,7 @@ public class BaseballScoreBoard {
     public static final String TEAM2 = "阪神";
 
     //野球スコアのスキャン
-    public static List BaseballScore() {
+    public static List<Integer> BaseballScore() {
         List<Integer> ScoreBoard = new ArrayList<>();
         for (int i = 0; i < 9; i++) {
             PrinterRelatedBaseball.printBaseballScoreBoard1(i, TEAM1);

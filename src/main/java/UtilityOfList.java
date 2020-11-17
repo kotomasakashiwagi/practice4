@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UtilityOfList {
-    public static int calculateSumOfList(List list) {
+    public static int calculateSumOfList(List<String> list) {
         int sum = 0;
         for (Object o : list) {
             int a = (int) o;
@@ -11,7 +11,7 @@ public class UtilityOfList {
         return sum;
     }
 
-    public static double calculateSumOfDoubleList(List list) {
+    public static double calculateSumOfDoubleList(List<String> list) {
         double sum = 0;
         for (Object o : list) {
             double a = (double) o;
@@ -20,7 +20,7 @@ public class UtilityOfList {
         return sum;
     }
 
-    public static int calculateMaxInList(List list) {
+    public static int calculateMaxInList(List<Integer> list) {
         int max = (int) list.get(0);
         for (int i = 1; i < list.size(); i++) {
             if (max < (int) list.get(i)) {
@@ -30,7 +30,7 @@ public class UtilityOfList {
         return max;
     }
 
-    public static int calculateMinInList(List list) {
+    public static int calculateMinInList(List<Integer> list) {
         int min = (int) list.get(0);
         for (int i = 1; i < list.size(); i++) {
             if (min > (int) list.get(i)) {
@@ -50,8 +50,8 @@ public class UtilityOfList {
         return sum;
     }
 
-    public static List createList(int n) {
-        List<String> list = new ArrayList<String>();
+    public static List<String> createList(int n) {
+        List<String> list = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             list.add(" ");
         }

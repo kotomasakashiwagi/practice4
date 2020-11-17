@@ -5,7 +5,7 @@ import java.util.List;
 public class Printer {
 
     private static final String SPAM = "SPAM";
-    private static DecimalFormat format1 = new DecimalFormat("0.#");
+    private static final DecimalFormat format1 = new DecimalFormat("0.#");
     private static final String PRIME = "素数";
     private static final String NOTPRIME = "素数でない";
 
@@ -78,7 +78,7 @@ public class Printer {
     }
 
     public static void printListRepeatedly(int n) {
-        List list = ListGenerator.generateListOfNaturalNumber();
+        List<Integer> list = ListGenerator.generateListOfNaturalNumber();
         list.add(0);
         for (int i = 0; i < n; i++) {
             int a = i % 10;
@@ -95,13 +95,13 @@ public class Printer {
         }
     }
 
-    public static void printListRow(List list) {
+    public static void printListRow(List<Integer> list) {
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
     }
 
-    public static void printListLine(List list) {
+    public static void printListLine(List<String> list) {
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i));
         }

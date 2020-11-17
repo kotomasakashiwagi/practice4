@@ -5,11 +5,10 @@ public class FibonacciSequence {
 
     static int count = 0;
 
-    public static void fibonacciRecurrenceFormula(long a, long b, int n) {
-        while (count < n) {
-            long sum = a + b;
+    public static void fibonacciRecurrenceFormula(int a, int b, int n) {
+        int sum = a + b;
+        if (sum < n) {
             System.out.print(sum + " ");
-            count++;
             fibonacciRecurrenceFormula(b, sum, n);
         }
     }

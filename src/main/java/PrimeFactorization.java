@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class PrimeFactorization {
     private static List<Integer> list = new ArrayList<>();
 
-    public static List primeFactorization(int n) {
+    public static List<Integer> primeFactorization(int n) {
         for (int i = 1; i <= n; i++) {
             if (n % i == 0) {
                 list.add(i);
@@ -14,7 +14,7 @@ public class PrimeFactorization {
     }
 
     public static boolean isPrimeNumber(int n) {
-        List list = primeFactorization(n);
+        List<Integer> list = primeFactorization(n);
         return list.size() == 2;
     }
 }

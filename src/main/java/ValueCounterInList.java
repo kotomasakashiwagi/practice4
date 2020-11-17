@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class ValueCounterInList {
-    public static IntPair countValueInList(int i, List list) {
+    public static IntPair countValueInList(int i, List<Integer> list) {
         int count = 0;
         for (Object o : list) {
             if (o.equals(i)) {

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class IntScanner {
     private static final int TEN = 10;
 
-    public static List scanTenNumbers() {
+    public static List<Integer> scanTenNumbers() {
         Printer.printString("整数を１０個入力してください。");
         Scanner scan = new Scanner(System.in);
         List<Integer> list = new ArrayList<>();
@@ -16,7 +16,7 @@ public class IntScanner {
         return list;
     }
 
-    public static List scanTenNumbers0Or1() {
+    public static List<Integer> scanTenNumbers0Or1() {
         Printer.printString("0か1の整数を１０個入力してください。");
         Scanner scan = new Scanner(System.in);
         List<Integer> list = new ArrayList<>();
@@ -48,7 +48,7 @@ public class IntScanner {
     }
 
     //
-    public static List scanTenPositiveX() {
+    public static List<Integer> scanTenPositiveX() {
         System.out.println("正数字を１０個入力してください。");
         Scanner scan = new Scanner(System.in);
         List<Integer> list = new ArrayList<>();
