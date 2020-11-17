@@ -30,6 +30,7 @@ public class IntScanner {
         }
         return list;
     }
+
     //一回の野球の得点をスキャン
     public static int scanIntX() {
         Scanner scan = new Scanner(System.in);
@@ -38,7 +39,7 @@ public class IntScanner {
 
     //正数字をスキャン
     public static int scanPositiveX() {
-
+        System.out.println("正の数字を入れてください");
         int x = scanIntX();
         if (x < 0) {
             throw new IllegalArgumentException("正数字を入れてください");

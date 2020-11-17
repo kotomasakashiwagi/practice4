@@ -1,4 +1,6 @@
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Printer {
 
@@ -70,6 +72,15 @@ public class Printer {
     public static void printAsterisk(int n) {
         for (int i = 0; i < n; i++) {
             System.out.println("\"");
+        }
+    }
+
+    public static void printListRepeatedly(int n){
+        List list = ListGenerator.generateListOfNaturalNumber();
+        list.add(0);
+        for (int i=0;i<n;i++){
+            int a = i%10;
+            System.out.print(list.get(a));
         }
     }
 

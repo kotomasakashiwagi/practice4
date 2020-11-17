@@ -15,7 +15,7 @@ public class QuestionSearcher {
             put("4-8", new Question8());
             put("4-9", new Question9());
             put("4-10", new Question10());
-            //put("4-11", new Question11());
+            put("4-11", new Question11());
             //put("4-12", new Question12());
             //put("4-13", new Question13());
             //put("4-14", new Question14());
