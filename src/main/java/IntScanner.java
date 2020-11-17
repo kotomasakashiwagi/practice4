@@ -61,4 +61,21 @@ public class IntScanner {
         }
         return list;
     }
+    public static int scanOneOrTwo() {
+        int x = scanIntX();
+        if (x<1 || x>2) {
+            throw new IllegalArgumentException("1か2を入れてください");
+        }
+        return x;
+
+    }
+    public static int scanOneOrTwoOrThree() {
+        int x = scanIntX();
+        if (x<1 || x>3) {
+            throw new IllegalArgumentException("1か2か3を入れてください");
+        }
+        return x;
+
+    }
+
 }
