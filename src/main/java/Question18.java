@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.List;
 
-public class Question18 implements Question{
+public class Question18 implements Question {
     @Override
     public void run() {
         System.out.println("0を入れるまで数字を入力してください。");
@@ -11,7 +11,7 @@ public class Question18 implements Question{
             double d = UtilityOfList.calculateSumOfDoubleList(list);
             System.out.println("合計は");
             Printer.printDouble(d);
-        }catch (InputMismatchException e) {
+        } catch (InputMismatchException e) {
             System.err.println("数字を入力してください。");
         }
     }

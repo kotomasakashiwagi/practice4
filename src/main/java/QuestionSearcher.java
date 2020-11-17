@@ -26,7 +26,7 @@ public class QuestionSearcher {
             put("4-19", new Question19());
             put("4-20", new Question20());
             put("4-21", new Question21());
-            //put("4-22", new Question22());
+            put("4-22", new Question22());
             put("err", new OutOfQuestion());
         }
 
