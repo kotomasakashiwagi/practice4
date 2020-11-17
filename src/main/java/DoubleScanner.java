@@ -20,7 +20,7 @@ public class DoubleScanner {
         double v = scanDoubleX();
         list.add(v);
         if (v == 0) {
-          System.out.println("入力は終了です。");
+            System.out.println("入力は終了です。");
         } else scanUntilX(d, list);
     }
 }

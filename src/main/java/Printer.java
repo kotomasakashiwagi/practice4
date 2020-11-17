@@ -100,6 +100,7 @@ public class Printer {
             System.out.println(list.get(i));
         }
     }
+
     public static void printListLine(List list) {
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i));
