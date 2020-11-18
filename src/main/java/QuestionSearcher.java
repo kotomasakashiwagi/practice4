@@ -38,7 +38,6 @@ public class QuestionSearcher {
             questionMap.get(s).run();
         } catch (NullPointerException e) {
             questionMap.get("err").run();
-            //System.exit(0);
         }
 
     }
