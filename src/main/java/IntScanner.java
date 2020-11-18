@@ -47,7 +47,7 @@ public class IntScanner {
 
     }
 
-    //
+
     public static List<Integer> scanTenPositiveX() {
         System.out.println("正数字を１０個入力してください。");
         Scanner scan = new Scanner(System.in);

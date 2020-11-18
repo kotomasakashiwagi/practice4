@@ -1,15 +1,15 @@
 import java.util.List;
 
-//スコアをそれぞれ合計したIntpairを返す
+//スコアをそれぞれ合計したIntPairを返す
 public class AggregateBaseballScore {
     public static IntPair aggregateBaseballScore(List<Integer> list) {
         int team1Score = 0;
         int team2Score = 0;
         for (int i = 0; i < list.size(); i++) {
             if (i % 2 == 0) {
-                team1Score += (int) list.get(i);
+                team1Score += list.get(i);
             } else {
-                team2Score += (int) list.get(i);
+                team2Score += list.get(i);
             }
 
 

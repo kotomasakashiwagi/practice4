@@ -1,9 +1,12 @@
 public class BaseballCount {
     private static int strike = 0;
     private static int ball = 0;
-    private static int foul = 0;
+    //private static int foul = 0;
 
+    //カウントを入力ファールなし
     public static String countStrikeOrBall() {
+        //int strike = 0;
+        //int ball = 0;
         while (strike < 3 && ball < 4) {
             PrinterRelatedBaseball.printStrikeOrBall();
             int i = IntScanner.scanOneOrTwo();
@@ -16,7 +19,11 @@ public class BaseballCount {
         return ball + "ボール" + strike + "ストライク";
     }
 
+    //カウントを入力ファールあり
     public static String countStrikeBallFoul() {
+        //int strike = 0;
+        //int ball = 0;
+        //int foul = 0;
         while (strike < 3 && ball < 4) {
             PrinterRelatedBaseball.printStrikeOrBallOrFoul();
             int i = IntScanner.scanOneOrTwoOrThree();

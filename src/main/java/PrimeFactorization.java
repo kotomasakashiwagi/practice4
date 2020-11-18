@@ -2,9 +2,9 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class PrimeFactorization {
-    private static List<Integer> list = new ArrayList<>();
-
+   //素因数分解
     public static List<Integer> primeFactorization(int n) {
+        List<Integer> list = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
             if (n % i == 0) {
                 list.add(i);
