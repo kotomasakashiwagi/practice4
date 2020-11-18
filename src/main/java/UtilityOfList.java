@@ -57,5 +57,8 @@ public class UtilityOfList {
         }
         return list;
     }
+    public static void AddToList(int i, List<Integer> list) {
+        list.add(i);
+    }
 
 }

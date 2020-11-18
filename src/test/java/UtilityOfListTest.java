@@ -53,9 +53,16 @@ public class UtilityOfListTest {
     @Test
     public void createListTest() {
         List<String> list = UtilityOfList.createList(2);
-        assertEquals(" ",list.get(0));
-        assertEquals(" ",list.get(1));
-        assertEquals(2,list.size());
+        assertEquals(" ", list.get(0));
+        assertEquals(" ", list.get(1));
+        assertEquals(2, list.size());
 
+    }
+
+    @Test
+    public void AddToList() {
+        List<Integer> list = createTestListInteger();
+        UtilityOfList.AddToList(1000, list);
+        assertEquals(1000, list.get(5));
     }
 }
