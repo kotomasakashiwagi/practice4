@@ -1,3 +1,4 @@
+import calculator.FibonacciSequence;
 import org.junit.Test;
 
 import java.util.ArrayList;
