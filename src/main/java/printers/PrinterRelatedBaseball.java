@@ -1,6 +1,6 @@
 package printers;
 
-import baseball.EnumOfBaseballTeam;
+import baseball.ProTeam;
 import baseball.Winner;
 import intpair.IntPair;
 
@@ -16,21 +16,21 @@ public class PrinterRelatedBaseball {
         System.out.print(inning + 1 + "回裏、" + team + "の得点は？ ");
     }
 
-    //得点の合計
-    public static void printAggregateScore(IntPair intPair) {
-        System.out.println(EnumOfBaseballTeam.Giants.getTeamName() + ":" + intPair.getX() +
-                " " + EnumOfBaseballTeam.Tigers.getTeamName() + ":" + intPair.getY());
+    //結果の出力
+    public static void printResult(IntPair intPair) {
+        System.out.println(ProTeam.Giants.getTeamName() + ":" + intPair.getX() +
+                " " + ProTeam.Tigers.getTeamName() + ":" + intPair.getY());
     }
 
-    //勝ったチームの出力
+    //勝ったチームの出力　printResultに入れる。
     public static void printWinTeam(Winner en) {
         if (en == Winner.Team1) {
-            System.out.println(EnumOfBaseballTeam.Giants.getTeamName() + "の勝ち");
+            System.out.println(ProTeam.Giants.getTeamName() + "の勝ち");
         } else if (en == Winner.Team2) {
-            System.out.println(EnumOfBaseballTeam.Tigers.getTeamName() + "の勝ち");
+            System.out.println(ProTeam.Tigers.getTeamName() + "の勝ち");
         } else {
             System.out.println("引き分け");
-        }
+        }//それ以外の場合の例外を出す
     }
 
     public static void printStrikeOrBall() {

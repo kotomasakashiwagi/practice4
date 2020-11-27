@@ -1,9 +1,9 @@
 package question;
 
-import baseball.BaseBallTeam;
+import baseball.BaseballTeam;
 import scanners.BaseballScoreBoard;
 import baseball.Winner;
-import baseball.WinnerJudgement;
+import baseball.Referee;
 import intpair.IntPair;
 import printers.PrinterRelatedBaseball;
 
@@ -15,15 +15,18 @@ public class Question7 implements Question {
     @Override
     public void run() {
         try {
-            List<Integer> firstScoreList = new ArrayList<>();
-            BaseBallTeam firstTeam = new BaseBallTeam(firstScoreList);
-            List<Integer> secondScoreList = new ArrayList<>();
-            BaseBallTeam secondTeam = new BaseBallTeam(secondScoreList);
-            BaseballScoreBoard.BaseballScore(firstTeam, secondTeam);
-            IntPair scoreSumPair = new IntPair(firstTeam.calculateSum(), secondTeam.calculateSum());
-            Winner winner = WinnerJudgement.judgeBaseballGame(scoreSumPair);
-            PrinterRelatedBaseball.printAggregateScore(scoreSumPair);
-            PrinterRelatedBaseball.printWinTeam(winner);
+            List<Integer> firstScoreList = new ArrayList<>();//表のスコア
+            BaseballTeam firstTeam = new BaseballTeam(firstScoreList);
+            List<Integer> secondScoreList = new ArrayList<>();//裏のスコア
+            BaseballTeam secondTeam = new BaseballTeam(secondScoreList);
+
+            BaseballScoreBoard.scanScore(firstTeam, secondTeam);
+
+            IntPair scoreSumPair = new IntPair(firstTeam.sumScore(), secondTeam.sumScore());
+            Winner winner = Referee.judgeBaseballGame(scoreSumPair);//試合結果にする。
+
+            PrinterRelatedBaseball.printResult(scoreSumPair);//両方の点数
+            PrinterRelatedBaseball.printWinTeam(winner);// 勝った方
         } catch (InputMismatchException e) {
             System.err.println("数字を入力してください。");
         } catch (IllegalArgumentException e) {

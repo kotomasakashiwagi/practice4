@@ -1,7 +1,9 @@
 package scanners;
+
 import printers.Printer;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -66,21 +68,20 @@ public class IntScanner {
     }
 
     public static int scanOneOrTwo() {
-        int scannedInt = scanIntX();
-        if (scannedInt < 1 || scannedInt > 2) {
-            throw new IllegalArgumentException("1か2を入れてください");
+        try {
+            return scanIntX();
+        } catch (InputMismatchException e) {
+            throw new InputMismatchException("1か2を入れてください");
         }
-        return scannedInt;
 
     }
 
     public static int scanOneOrTwoOrThree() {
-        int scannedInt = scanIntX();
-        if (scannedInt < 1 || scannedInt > 3) {
-            throw new IllegalArgumentException("1か2か3を入れてください");
+        try {
+            return scanIntX();
+        } catch (InputMismatchException e) {
+            throw new InputMismatchException("1か2か3を入れてください");
         }
-        return scannedInt;
-
     }
 
     public static int scanXMoreThanTwo() {

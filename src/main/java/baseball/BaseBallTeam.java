@@ -2,14 +2,14 @@ package baseball;
 
 import java.util.List;
 
-public class BaseBallTeam {
+public class BaseballTeam {
     private final List<Integer> score;
 
-    public BaseBallTeam(List<Integer> score) {
+    public BaseballTeam(List<Integer> score) {
         this.score = score;
     }
 
-    public int calculateSum() {
+    public int sumScore() {
         return score.stream().mapToInt(i -> i).sum();
     }
 

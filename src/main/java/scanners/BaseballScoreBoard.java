@@ -1,20 +1,20 @@
 package scanners;
 
-import baseball.BaseBallTeam;
-import baseball.EnumOfBaseballTeam;
+import baseball.BaseballTeam;
+import baseball.ProTeam;
 import printers.PrinterRelatedBaseball;
-import scanners.IntScanner;
 
 public class BaseballScoreBoard {
     //野球スコアのスキャン
-    public static void BaseballScore(BaseBallTeam firstTeam, BaseBallTeam secondTeam) {
+    public static void scanScore(BaseballTeam firstTeam, BaseballTeam secondTeam) {
         for (int i = 0; i < 9; i++) {
-            PrinterRelatedBaseball.printBaseballScoreBoard1(i, EnumOfBaseballTeam.Giants.getTeamName());
+            PrinterRelatedBaseball.printBaseballScoreBoard1(i, ProTeam.Giants.getTeamName());
             int i1 = IntScanner.scanPositiveX();
             if (i1 < 0) {
-                throw new IllegalArgumentException("正数字を入れてください");
+                System.out.println("正数字を入れてください");
+                i1 = IntScanner.scanPositiveX();
             }
-            PrinterRelatedBaseball.printBaseballScoreBoard2(i, EnumOfBaseballTeam.Tigers.getTeamName());
+            PrinterRelatedBaseball.printBaseballScoreBoard2(i, ProTeam.Tigers.getTeamName());
             int i2 = IntScanner.scanPositiveX();
             if (i2 < 0) {
                 throw new IllegalArgumentException("正数字を入れてください");

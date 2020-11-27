@@ -1,7 +1,7 @@
 package calculator;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PrimeFactorization {
     //素因数分解
@@ -20,11 +20,11 @@ public class PrimeFactorization {
     }
 
     public static boolean isPrimeNumber(int naturalNumber) {
-        if (naturalNumber % 2 == 0) {
+        if (naturalNumber > 2 && naturalNumber % 2 == 0) {
             return false;
         } else {
             int sqrtN = (int) Math.sqrt(naturalNumber);
-            for (int i = 2; i < sqrtN; i++) {
+            for (int i = 2; i <= sqrtN; i++) {
                 if (naturalNumber % i == 0) {
                     return false;
                 }
