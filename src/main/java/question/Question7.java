@@ -1,36 +1,31 @@
 package question;
 
-import baseball.BaseballTeam;
-import scanners.BaseballScoreBoard;
-import baseball.Winner;
+import baseball.ProTeam;
 import baseball.Referee;
-import intpair.IntPair;
+import baseball.Result;
+import baseball.ScoreBord;
 import printers.PrinterRelatedBaseball;
+import scanners.BaseballScoreScanner;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 
 public class Question7 implements Question {
+    private static final String GIANTS = "巨人";
+    private static final String TIGERS = "阪神";
+
     @Override
     public void run() {
-        try {
-            List<Integer> firstScoreList = new ArrayList<>();//表のスコア
-            BaseballTeam firstTeam = new BaseballTeam(firstScoreList);
-            List<Integer> secondScoreList = new ArrayList<>();//裏のスコア
-            BaseballTeam secondTeam = new BaseballTeam(secondScoreList);
+        ProTeam firstTeam = new ProTeam(GIANTS);
+        ProTeam secondTeam = new ProTeam(TIGERS);
+        List<Integer> firstScore = new ArrayList<>();
+        List<Integer> secondScore = new ArrayList<>();
+        ScoreBord scoreBord = new ScoreBord(firstScore, secondScore);
+        BaseballScoreScanner.scanScore(firstTeam, secondTeam, scoreBord);
 
-            BaseballScoreBoard.scanScore(firstTeam, secondTeam);
+        Result result = Referee.judgeBaseballGame(scoreBord, firstTeam, secondTeam);
+        PrinterRelatedBaseball.printResult(scoreBord, firstTeam, secondTeam, result);
 
-            IntPair scoreSumPair = new IntPair(firstTeam.sumScore(), secondTeam.sumScore());
-            Winner winner = Referee.judgeBaseballGame(scoreSumPair);//試合結果にする。
-
-            PrinterRelatedBaseball.printResult(scoreSumPair);//両方の点数
-            PrinterRelatedBaseball.printWinTeam(winner);// 勝った方
-        } catch (InputMismatchException e) {
-            System.err.println("数字を入力してください。");
-        } catch (IllegalArgumentException e) {
-            System.err.println(e.getMessage());
-        }
     }
+
 }

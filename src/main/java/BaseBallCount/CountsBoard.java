@@ -16,8 +16,6 @@ public class CountsBoard {
     public static void putScore(EnumMap<Counts, Integer> countTable, Counts counts) {
         switch (counts) {
             case Strike:
-                countTable.put(counts, countTable.get(counts) + 1);
-                break;
             case Ball:
                 countTable.put(counts, countTable.get(counts) + 1);
                 break;
@@ -27,7 +25,7 @@ public class CountsBoard {
                 }
                 break;
         }
-        //スレッドセーフでないけど同時に呼ばれることはない。
+        //同時に複数から呼ばれることはない
     }
 
     ;

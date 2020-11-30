@@ -6,9 +6,12 @@ import java.util.EnumMap;
 
 //mapをもらって1打席のカウントを返す
 public class RefereeInBat {
-    public static String returnResultInBatNOFoul(EnumMap<Counts, Integer> count) {
+    private static final int THREE = 3;
+    private static final int TWO = 2;
 
-        while (count.get(Counts.Ball) <= 3 && count.get(Counts.Strike) <= 2) {
+    public static String returnResultInBatIgnoreFoul(EnumMap<Counts, Integer> count) {
+
+        while (count.get(Counts.Ball) <= THREE && count.get(Counts.Strike) <= TWO) {
             Counts counts = CountScanner.countStrikeOrBall();
             CountsBoard.putScore(count, counts);
         }
@@ -17,7 +20,7 @@ public class RefereeInBat {
     }
 
     public static String returnResultInBat(EnumMap<Counts, Integer> count) {
-        while (count.get(Counts.Ball) <= 3 && count.get(Counts.Strike) <= 2) {
+        while (count.get(Counts.Ball) <= THREE && count.get(Counts.Strike) <= TWO) {
             Counts counts = CountScanner.countStrikeBallFoul();
             CountsBoard.putScore(count, counts);
         }

@@ -46,7 +46,7 @@ public class IntScanner {
     public static int scanPositiveX() {
         int scannedInt = scanIntX();
         if (scannedInt < 0) {
-            throw new IllegalArgumentException("正数字を入れてください");
+            throw new IllegalArgumentException();
         }
         return scannedInt;
 
@@ -67,6 +67,7 @@ public class IntScanner {
         return positiveTenIntegerList;
     }
 
+    //1か2
     public static int scanOneOrTwo() {
         try {
             return scanIntX();
@@ -76,6 +77,7 @@ public class IntScanner {
 
     }
 
+    //1か2か3
     public static int scanOneOrTwoOrThree() {
         try {
             return scanIntX();

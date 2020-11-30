@@ -1,8 +1,8 @@
 package printers;
 
 import baseball.ProTeam;
-import baseball.Winner;
-import intpair.IntPair;
+import baseball.Result;
+import baseball.ScoreBord;
 
 public class PrinterRelatedBaseball {
 
@@ -17,20 +17,22 @@ public class PrinterRelatedBaseball {
     }
 
     //結果の出力
-    public static void printResult(IntPair intPair) {
-        System.out.println(ProTeam.Giants.getTeamName() + ":" + intPair.getX() +
-                " " + ProTeam.Tigers.getTeamName() + ":" + intPair.getY());
+    public static void printResult(ScoreBord scoreBord, ProTeam firstTeam, ProTeam secondTeam, Result result) {
+        System.out.println(firstTeam.getName() + ":" + scoreBord.sumFirstScore() +
+                " " + secondTeam.getName() + ":" + scoreBord.sumSecondScore());
+        printWinTeam(result);
     }
 
-    //勝ったチームの出力　printResultに入れる。
-    public static void printWinTeam(Winner en) {
-        if (en == Winner.Team1) {
-            System.out.println(ProTeam.Giants.getTeamName() + "の勝ち");
-        } else if (en == Winner.Team2) {
-            System.out.println(ProTeam.Tigers.getTeamName() + "の勝ち");
-        } else {
-            System.out.println("引き分け");
-        }//それ以外の場合の例外を出す
+    public static void printWinTeam(Result result) {
+        Result.Determinable determinable = result.getDeterminable();
+        switch (determinable) {
+            case EvenOrOther:
+                System.out.println(result.getResult());
+                break;
+            case Determinable:
+                System.out.println(result.getResult() + "の勝ち");
+        }
+
     }
 
     public static void printStrikeOrBall() {

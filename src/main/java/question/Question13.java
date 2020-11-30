@@ -11,7 +11,7 @@ public class Question13 implements Question {
     public void run() {
         try {
             CountsBoard countsBoard = new CountsBoard();
-            String result = RefereeInBat.returnResultInBatNOFoul(countsBoard.countTable);
+            String result = RefereeInBat.returnResultInBatIgnoreFoul(countsBoard.countTable);
             Printer.printString(result);
         } catch (InputMismatchException | IllegalArgumentException e) {
             System.err.println(e.getMessage());

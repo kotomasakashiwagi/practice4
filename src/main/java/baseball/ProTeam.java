@@ -1,21 +1,13 @@
 package baseball;
 
-public enum ProTeam {
-    Giants("巨人"),
-    Tigers("阪神"),
-    ;
+public class ProTeam {
+    private final String name;
 
-    private final String team;
-
-    private ProTeam(String team) {
-        this.team = team;
+    public ProTeam(String name) {
+        this.name = name;
     }
 
-    public String getTeamName() {
-        return team;
+    public String getName() {
+        return this.name;
     }
-};
-
-
-
-
+}
